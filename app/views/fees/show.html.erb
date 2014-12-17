@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @fee.title %>
+</h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fee.description %>
+</p>
+
+<p>
+  <strong>Fee types:</strong>
+  <br/>
+  <% @fee.fee_type.each do |fee_type| %>
+    <%= fee_type.title %>:
+    £<%= fee_type.amount %>
+    <br/>
+    <strong>Applicable for forms:</strong>
+    <ul>
+    <% fee_type.form_type.each do |form_type| %>
+      <li>
+        <%= form_type.number %> - <%= form_type.form_name %>
+      </li>
+      <% end %>
+    </ul>
+    <br/>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_fee_path(@fee) %> |
+<%= link_to 'Back', fees_path %>

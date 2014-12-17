@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fee_type.title %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @fee_type.amount %>
+</p>
+
+<%= link_to 'Edit', edit_fee_type_path(@fee_type) %> |
+<%= link_to 'Back', fee_types_path %>
