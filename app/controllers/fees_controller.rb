@@ -10,6 +10,22 @@ class FeesController < ApplicationController
   # GET /fees/1
   # GET /fees/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @fee, only: [:title, :description],
+               include: {
+                 fee_type: {
+                   only: [:title, :amount],
+                   include: {
+                     form_type: {
+                       only: [:number, :form_name]
+                     }
+                   }
+                 }
+               }
+      end
+    end
   end
 
   # GET /fees/new
