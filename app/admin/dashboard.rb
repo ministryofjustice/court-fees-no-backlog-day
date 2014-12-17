@@ -27,6 +27,9 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Info" do
           para "Welcome to ActiveAdmin."
           para "Click on the model names above, to edit them"
+          para "Fees hold the toplevel topics"
+          para "Fee types sit under fees"
+          para "Form types sit under fee types"
         end
       end
     end

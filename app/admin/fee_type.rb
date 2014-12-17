@@ -22,5 +22,6 @@ ActiveAdmin.register FeeType do
   #   permitted
   # end
 
+  permit_params :fee_id, :title, :amount
 
 end

@@ -46,6 +46,17 @@ ActiveAdmin.setup do |config|
   # This will ONLY change the title for the admin section. Other
   # namespaces will continue to use the main "site_title" configuration.
 
+  config.namespace :admin do |admin|
+    admin.site_title = "Custom Admin Title"
+
+    admin.build_menu do |menu|
+      menu.add :label => "The Application", :url => "/", :priority => 0
+      menu.add :label => "Fees", :url => "/admin/fees", :priority => 1
+      menu.add :label => "Fee Types", :url => "/admin/fee_types", :priority => 2
+      menu.add :label => "Form Types", :url => "/admin/form_types", :priority => 3
+    end
+  end
+
   # == User Authentication
   #
   # Active Admin will automatically call an authentication

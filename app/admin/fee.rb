@@ -3,6 +3,7 @@ ActiveAdmin.register Fee do
   index do
     column :title
     column :description
+    actions
   end
 
   # See permitted parameters documentation:
@@ -18,5 +19,6 @@ ActiveAdmin.register Fee do
   #   permitted
   # end
 
+  permit_params :title, :description
 
 end

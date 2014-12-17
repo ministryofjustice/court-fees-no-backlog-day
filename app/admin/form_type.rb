@@ -22,5 +22,5 @@ ActiveAdmin.register FormType do
   #   permitted
   # end
 
-
+  permit_params :fee_type_id, :number, :form_name
 end
