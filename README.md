@@ -19,6 +19,11 @@ As admin, login in via **/admin** and edit the data.
 
 The other two views are **/fees** and **/forms**.
 
+Admin credentials: **admin@example.com** with **password** as
+password.
+
+Database dump is in **db/data_dump.sql**.
+
 ## Models
 
 The way models relate to each other
