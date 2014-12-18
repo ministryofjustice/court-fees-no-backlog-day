@@ -12,16 +12,9 @@
   <tbody>
     <% @fees.each do |fee| %>
       <tr>
-        <td><%= fee.title %></td>
+        <td><%= link_to fee.title, fee %></td>
         <td><%= fee.description %></td>
-        <td><%= link_to 'Show', fee %></td>
-        <td><%= link_to 'Edit', edit_fee_path(fee) %></td>
-        <td><%= link_to 'Destroy', fee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Fee', new_fee_path %>
